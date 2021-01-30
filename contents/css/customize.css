@@ -179,6 +179,10 @@ body {
     background: url(../images/icons/html5.png) no-repeat 0 0;
 }
 
+.social-icons li.githiub a {
+    background: url(../images/icons/github.png);
+}
+
 .social-icons li.html5 a:hover {
     background-color: #f3642c;
 }
