@@ -105,6 +105,11 @@ h1::after {
   letter-spacing: 0.2rem;
 }
 
+.about-me-text {
+  text-align: center;
+  color: white;
+}
+
 .header {
   height: 100vh;
 }
