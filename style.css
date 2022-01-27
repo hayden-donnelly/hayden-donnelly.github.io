@@ -22,7 +22,6 @@ body {
 
 .wrapper {
   overflow-x: hidden;
-  position: fixed;
 }
 
 h1 {
@@ -91,6 +90,7 @@ h1::after {
 
 .title {
   display: flex;
+  flex-direction: column;
   place-content: center;
   position: absolute;
   top: 50%;
@@ -98,12 +98,11 @@ h1::after {
   transform: translate(-50%, -50%);
 }
 
-.title-scrolled {
-  display: flex;
-  place-content: center;
-  position: absolute;
-  top: 10%;
-  left: 50%;
+.about-me {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.932);
+  font-weight: lighter;
+  letter-spacing: 0.2rem;
 }
 
 .header {
