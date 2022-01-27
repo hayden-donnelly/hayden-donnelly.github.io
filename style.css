@@ -6,6 +6,7 @@
   --typewriterCharacters: 15;
   --subtitleFadeInSpeed: 0.5s;
   --cursorFadeDelay: 0.3s;
+  --bg-color-2: white;
 }
 
 body {
@@ -108,7 +109,7 @@ h1::after {
   position: absolute;
   width: 300vw;
   height: 300vh;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-color-2);
   clip-path: polygon(50% 0%, 100% 0, 100% 99%, 0 100%, 0 49%);
 }
 
