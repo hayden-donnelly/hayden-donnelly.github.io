@@ -16,6 +16,7 @@ body {
   place-content: center;
   text-align: center;*/
   background: var(--bg-color);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -82,7 +83,38 @@ h1::after {
   }
 }
 
-.header {
+.title {
   display: flex;
   place-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title-scrolled {
+  display: flex;
+  place-content: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+.header {
+  height: 100vh;
+}
+
+.square {
+  position: absolute;
+  width: 300vw;
+  height: 300vh;
+  background-color: rgb(255, 255, 255);
+  clip-path: polygon(50% 0%, 100% 0, 100% 99%, 0 100%, 0 49%);
+}
+
+.bg {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
 }
