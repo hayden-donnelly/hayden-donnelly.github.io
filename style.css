@@ -112,10 +112,3 @@ h1::after {
   background-color: var(--bg-color-2);
   clip-path: polygon(50% 0%, 100% 0, 100% 99%, 0 100%, 0 49%);
 }
-
-.bg {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: yellow;
-}
