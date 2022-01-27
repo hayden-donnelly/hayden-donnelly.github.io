@@ -1,6 +1,27 @@
-.bg {
-  width: 100px;
-  height: 100px;
-  background: rgb(0, 255, 76);
-  position: absolute;
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+}
+
+img {
+  border-radius: 0.5rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  float: right;
+  color: black;
 }
