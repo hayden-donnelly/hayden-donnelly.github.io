@@ -24,3 +24,15 @@ const scene2 = new ScrollMagic.Scene({
 .setTween(timeline2)
 .addTo(controller)
 //.addIndicators()
+
+const timeline3 = new TimelineMax();
+timeline3.fromTo('.projects', {opacity: 0}, {opacity: 1, duration: 1})
+
+const scene3 = new ScrollMagic.Scene({
+    triggerElement: '.trigger',
+    triggerHook: 0.5,
+    duration: 100,
+})
+.setTween(timeline3)
+.addTo(controller)
+//.addIndicators()
