@@ -89,6 +89,8 @@ h1::after {
 }
 
 .title {
+  text-align: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   place-content: center;
