@@ -19,6 +19,7 @@ body {
   font-family: "IBM Plex Mono", monospace;
   min-height: 100vh;
   background: cornflowerblue;
+  overflow-x: hidden;
 }
 
 /*h1 {
@@ -80,6 +81,10 @@ h1 {
 
 h2 {
   padding: 1rem;
+}
+
+.wrapper {
+  overflow-x: hidden;
 }
 
 .header {
