@@ -121,6 +121,19 @@ h2 {
   z-index: 1;
 }
 
+.projects {
+  width: 100%;
+  /*height: 100vh;*/
+  top: 120%;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*.projects {
   z-index: 20;
   width: 100%;
@@ -130,27 +143,27 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
-
+*/
 .card {
   padding: 2rem;
   border-radius: 0.5rem;
   width: 50%;
   background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  color: cornflowerblue;
   font-family: "IBM Plex Mono", monospace;
 }
 
 .card-title {
-  color: rgb(0, 0, 0);
+  color: cornflowerblue;
 }
 
 .card-image {
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   width: 100%;
   object-fit: cover;
 }
 
 .card-link {
   float: right;
-  color: black;
-}*/
+  color: cornflowerblue;
+}
