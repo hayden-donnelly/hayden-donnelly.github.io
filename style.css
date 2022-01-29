@@ -7,6 +7,32 @@
   --subtitleFadeInSpeed: 0.5s;
   --cursorFadeDelay: 0.3s;
   --bg-color-2: white;
+
+  --header-text-color: rgb(255, 255, 255);
+  --header-bg-color: rgb(105, 10, 194);
+  --transition-color: rgb(255, 255, 255);
+
+  --header-text-color: rgb(255, 255, 255);
+  --header-bg-color: rgb(204, 15, 62);
+  --transition-color: rgb(255, 255, 255);
+
+  --header-bg-color: rgb(10, 163, 112);
+
+  --header-text-color: rgb(10, 163, 112);
+  --header-bg-color: rgb(255, 255, 255);
+  --transition-color: rgb(10, 163, 112);
+
+  --header-text-color: rgb(105, 10, 194);
+  --header-bg-color: rgb(255, 255, 255);
+  --transition-color: rgb(105, 10, 194);
+
+  --header-text-color: rgb(255, 255, 255);
+  --header-bg-color: rgb(105, 10, 194);
+  --transition-color: rgb(255, 255, 255);
+
+  --header-text-color: rgb(255, 255, 255);
+  --header-bg-color: cornflowerblue;
+  --transition-color: rgb(255, 255, 255);
 }
 
 * {
@@ -18,7 +44,7 @@
 body {
   font-family: "IBM Plex Mono", monospace;
   min-height: 100vh;
-  background: cornflowerblue;
+  background: var(--header-bg-color);
   overflow-x: hidden;
 }
 
@@ -91,7 +117,7 @@ h2 {
   width: 100%;
   height: 100vh;
   text-align: center;
-  background: cornflowerblue;
+  background: var(--header-bg-color);
   position: absolute;
 }
 
@@ -100,7 +126,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--header-text-color);
 }
 
 .transition-container {
@@ -117,8 +143,17 @@ h2 {
   height: 300vh;
   top: 50%;
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 50%);
-  background: rgb(255, 255, 255);
+  background: var(--transition-color);
   z-index: 1;
+}
+
+.projects-header {
+  color: cornflowerblue;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
 }
 
 .projects {
@@ -126,7 +161,7 @@ h2 {
   /*height: 100vh;*/
   top: 120%;
   text-align: center;
-  background: rgb(255, 255, 255);
+  background: var(--transition-color);
   position: absolute;
   z-index: 1;
   display: flex;
@@ -134,36 +169,29 @@ h2 {
   align-items: center;
 }
 
-/*.projects {
-  z-index: 20;
-  width: 100%;
-  height: 100vh;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-*/
 .card {
-  padding: 2rem;
+  padding: 5rem;
   border-radius: 0.5rem;
   width: 50%;
-  background-color: rgb(255, 255, 255);
-  color: cornflowerblue;
+  /*background-color: rgb(255, 255, 255);*/
+  color: black;
   font-family: "IBM Plex Mono", monospace;
 }
 
 .card-title {
-  color: cornflowerblue;
+  color: var(--header-bg-color);
 }
 
 .card-image {
-  border-radius: 0.3rem;
+  /*border-radius: 0.3rem;*/
   width: 100%;
   object-fit: cover;
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: rgb(255, 255, 255);
 }
 
 .card-link {
   float: right;
-  color: cornflowerblue;
+  color: rgba(0, 0, 0, 0.192);
 }
