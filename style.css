@@ -131,7 +131,7 @@ h2 {
 
 .transition-container {
   position: absolute;
-  width: 150vw;
+  width: 100vw;
   height: 150vh;
   overflow-y: hidden;
   z-index: 1;
@@ -139,10 +139,11 @@ h2 {
 
 .transition {
   position: absolute;
-  width: 150vw;
+  width: 200vw;
   height: 300vh;
   top: 50%;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 50%);
+  /*clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 50%);*/
+  clip-path: polygon(50% 0, 50% 100%, 0 100%, 0 50%);
   background: var(--transition-color);
   z-index: 1;
 }
