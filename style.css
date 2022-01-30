@@ -134,16 +134,16 @@ h2 {
   width: 100vw;
   height: 150vh;
   overflow-y: hidden;
+  overflow-x: hidden;
   z-index: 1;
 }
 
 .transition {
   position: absolute;
-  width: 200vw;
+  width: 150vw;
   height: 300vh;
   top: 50%;
-  /*clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 50%);*/
-  clip-path: polygon(50% 0, 50% 100%, 0 100%, 0 50%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 50%);
   background: var(--transition-color);
   z-index: 1;
 }
