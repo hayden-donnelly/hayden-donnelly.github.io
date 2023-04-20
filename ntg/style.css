@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(19, 19, 19);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+}
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* this centers the container horizontally */
+    display: flex; /* this makes the container a flexbox */
+    justify-content: center; /* this centers the flex items horizontally */
+    align-items: center; /* this centers the flex items vertically */
+}
+
+.flexbox {
+    display: flex; /* this makes the flexbox a flex container */
+    flex-wrap: wrap; /* this allows the flex items to wrap to the next line */
+    justify-content: center; /* this centers the flex items horizontally */
+}
+
+.flexbox img {
+    width: 100%; /* this makes the images responsive */
+    height: auto; /* this preserves the aspect ratio of the images */
+    max-width: 300px; /* this limits the maximum width of the images */
+    margin: 5px; /* this adds some margin around the images */
+}
+
+.brush-gif {
+    width: 400px;
+}
