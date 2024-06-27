@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="keywords" content="Hayden Donnelly, machine learning, world models, AI" />
+    <meta name="author" content="Hayden Donnelly" />
+    <meta name="description" content="Hayden Donnelly's blog post about world models" />
+    <title>Hayden Donnelly</title>
+    <style>
+        body {
+			font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
+            font-kerning: auto;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            display: block;
+            padding-bottom: 10px;
+        }
+        
+        img {
+            padding-top: 20px;
+            border-radius: 2px;
+        }
+        
+        .column {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+        
+        h2 {
+			font-size: 22px;
+            font-weight: 500;
+        }
+        
+        a {
+            color: rgb(33, 150, 243);
+        	text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+        
+        a:visited {
+            color: rgb(33, 150, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="column">
+        <h1>Thoughts On World Models</h1>
+        <p>
+            The thing is, I'm kinda retarded. I mean I don't even know what Kolmogorov complexity is. Apparently it has something to do with algorithms and maybe information.
+            These both seem like pretty important aspects of language models, so I should probably learn what Kolmogorov complexity is, but I'm not going to because it's 4:16 AM.
+            Really I just want to write about the things already floating around in my head. Let's start with what I've heard about world models. To begin with, my simcluster has
+            told me that language models are world models, and also image models, and also video models. Apparently these media are created by the world and we can learn something
+            about the world by modelling them. One guy said that video models will lead to AGI by simulating everything. This is obviously false. In truth, only *hyper field networks*
+            will lead to... something, by simulating everything. I've been trying to come up with a cool name like that for a while. Maybe it's not perfect, but it'll do for now.
+            These are basically neural networks trained to generate other neural networks (hypernetworks) with the special feature being that the target neural networks are neural fields,
+            aka implicit neural representations. If you aren't familiar with these I recommend watching "CVPR 2022 Tutorial on Neural Fields in Computer Vision" on YouTube. It has this
+            whole thing with the researchers harvesting a wheat field, it's great. Okay but back on topic, the cool thing about hyper field networks is that we can basically encode
+            whatever data we want into a set of neural fields and then apply the same generative framework regardless of the initial data type. For example, we can take an image dataset,
+            train a neural field for each image, then train a generative hypernetwork on the resultant neural field dataset. Likewise, we can train a bunch of neural radiance fields on a 
+            dataset of 3D scenes, then again, train a generative hypernetwork on the resultant neural field dataset. The same goes for neural signed distance fields and neural video fields.
+            Really you can just take any modality, sandwich it between the words "neural" and "field", and then train a generative hypernetwork to, uh, generate it. It seems really obvious
+            right? Well in practice it can be kinda difficult which is probably why we haven't seen a ton of people doing it yet. I mean there's definitely people doing it, but it's not all
+            that common. 
+        </p>
+        <p>
+            The first paper I read about this was "HyperDiffusion: Generating Implicit Neural Fields with Weight-Space Diffusion" by Erkoç, Ma, Shan, Nießner, and Dai.
+            It pretty much lays out this whole framework. They even jumped to the endgame by training on 4D space-time fields for 3D animation synthesis. Unfortunately I don't think they had
+            enough data. In the project's GitHub repo, someone posted an issue describing how their replication attempts failed to converge with more than a hundred or so training samples.
+            The implication being that the paper's original models may have been overfit. This tracks with my own experience trying to train these sorts of models. Curating the dataset often
+            requires a significant investment of time and compute. The mini "classic" datasets like MNIST and CIFAR-10 are usually too small because their neural field representations have
+            significantly more complex distributions. There's also a tradeoff between pre-processing time and sample size. You can encode a base dataset into a neural field dataset more quickly
+            by choosing a field architecture like Instant NGP, but then the large hash grid will strain your vram during hypernetwork training. Conversely, you can forgoe the hash grid and then
+            find yourself doing napkin math to figure out how many more years your poor 3070 will be occupied. So yeah, the data thing is annoying. To make it a little less annoying, I've started
+            using synthetic datasets. One of them is called colored-monsters. It's just a bunch of 3D renders (3 million), each with 3 randomly selected models and a handful of randomized traits.
+            Okay I kind of lied. I was always working with synthetic 3D data, but I did switch from blender to a custom OpenGL renderer so I could synthesize it at a rate fast enough to warrant
+            some kind of medical disclaimer prior to displaying the render window. Anyways, this leads me to my next point which is that the lack of 3D data can be solved via traditional
+            procedural generation techniques. Game developers have been doing this for a long time, why can't you? Really you just need to write some algorithms capable of generating an unfathomable
+            number of things/stuff from a target distribution so that you can train a generative model which interpolates them, therefore turning tech art black magic into vibes. Wait 
+            maybe I do understand Kolmogorov complexity. Either way the next step is fully procedural worlds. This has already been done before and it's not all that interesting. But you/we/I should
+            put a bunch of agents in them to get some interesting emergent behavior, split the world into chunks, encode each chunk into a space-time neural field, then train a neural field hypernetwork
+            on the encoded chunks. NOW_THIS_IS_WORLD_MODELLING.jpg
+        </p>
+    </div>
+</body>
+
+</html>
