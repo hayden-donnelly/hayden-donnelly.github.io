@@ -24,7 +24,10 @@
             will lead to... something, by simulating everything. I've been trying to come up with a cool name like that for a while. Maybe it's not perfect, but it'll do for now.
             These are basically neural networks trained to generate other neural networks (hypernetworks) with the special feature being that the target neural networks are neural fields,
             aka implicit neural representations. If you aren't familiar with these I recommend watching "CVPR 2022 Tutorial on Neural Fields in Computer Vision" on YouTube. It has this
-            whole thing with the researchers harvesting a wheat field, it's great. Okay but back on topic, the cool thing about hyper field networks is that we can basically encode
+            whole thing with the researchers harvesting a wheat field, it's great. 
+        </p>
+        <p>
+            Okay but back on topic, the cool thing about hyper field networks is that we can basically encode
             whatever data we want into a set of neural fields and then apply the same generative framework regardless of the initial data type. For example, we can take an image dataset,
             train a neural field for each image, then train a generative hypernetwork on the resultant neural field dataset. Likewise, we can train a bunch of neural radiance fields on a 
             dataset of 3D scenes, then again, train a generative hypernetwork on the resultant neural field dataset. The same goes for neural signed distance fields and neural video fields.
@@ -40,7 +43,10 @@
             requires a significant investment of time and compute. The mini "classic" datasets like MNIST and CIFAR-10 are usually too small because their neural field representations have
             significantly more complex distributions. There's also a tradeoff between pre-processing time and sample size. You can encode a base dataset into a neural field dataset more quickly
             by choosing a field architecture like Instant NGP, but then the large hash grid will strain your vram during hypernetwork training. Conversely, you can forgoe the hash grid and then
-            find yourself doing napkin math to figure out how many more years your poor 3070 will be occupied. So yeah, the data thing is annoying. To make it a little less annoying, I've started
+            find yourself doing napkin math to figure out how many more years your poor 3070 will be occupied. 
+        <p>
+        </p>
+            So yeah, the data thing is annoying. To make it a little less annoying, I've started
             using synthetic datasets. One of them is called colored-monsters. It's just a bunch of 3D renders (3 million), each with 3 randomly selected models and a handful of randomized traits.
             Okay I kind of lied. I was always working with synthetic 3D data, but I did switch from blender to a custom OpenGL renderer so I could synthesize it at a rate fast enough to warrant
             some kind of medical disclaimer prior to displaying the render window. Anyways, this leads me to my next point which is that the lack of 3D data can be solved via traditional
