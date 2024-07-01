@@ -5,14 +5,16 @@ body {
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: circle;
     margin: 0;
     padding: 0;
+    padding-left: 30px;
 }
 
 li {
-    display: block;
+    list-style-type: disc;
     padding-bottom: 10px;
+    color: black;
 }
 
 img {
@@ -49,3 +51,18 @@ a:visited {
     color: rgb(33, 150, 243);
 }
 
+table { 
+    margin: 0 auto; 
+    border-collapse: collapse; 
+    width: 100%; 
+}
+
+th, td { 
+    padding: 6px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+
+th { 
+    background-color: #f2f2f2; 
+}
