@@ -50,19 +50,3 @@ a:hover {
 a:visited {
     color: rgb(33, 150, 243);
 }
-
-table { 
-    margin: 0 auto; 
-    border-collapse: collapse; 
-    width: 100%; 
-}
-
-th, td { 
-    padding: 6px; 
-    text-align: left; 
-    border-bottom: 1px solid #ddd; 
-}
-
-th { 
-    background-color: #f2f2f2; 
-}
