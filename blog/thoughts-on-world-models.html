@@ -8,6 +8,9 @@
     <meta name="keywords" content="Hayden Donnelly, machine learning, world models, AI" />
     <meta name="author" content="Hayden Donnelly" />
     <meta name="description" content="Hayden Donnelly's blog post about world models" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 	<link href="../style.css" rel="stylesheet">
     <title>Thoughts On World Models</title>
 </head>
@@ -44,8 +47,8 @@
             significantly more complex distributions. There's also a tradeoff between pre-processing time and sample size. You can encode a base dataset into a neural field dataset more quickly
             by choosing a field architecture like Instant NGP, but then the large hash grid will strain your vram during hypernetwork training. Conversely, you can forgoe the hash grid and then
             find yourself doing napkin math to figure out how many more years your poor 3070 will be occupied. 
-        <p>
         </p>
+        <p>
             So yeah, the data thing is annoying. To make it a little less annoying, I've started
             using synthetic datasets. One of them is called colored-monsters. It's just a bunch of 3D renders (3 million), each with 3 randomly selected models and a handful of randomized traits.
             Okay I kind of lied. I was always working with synthetic 3D data, but I did switch from blender to a custom OpenGL renderer so I could synthesize it at a rate fast enough to warrant
